@@ -36,7 +36,7 @@ void Print(TrieNode *root, char word[], int index){
 	if(root == NULL) return;
 	if(root->isEndOfWord){//if i get to the end of any word
 		word[index] = '\0';
-		printf("%s\t %ld \n", word, root->count);
+		printf("%s \t %ld\n", word, root->count);
 	}
 	for(int i = 0; i < NUM_LETTERS;i++){
 		if(root->children[i]){
@@ -50,7 +50,7 @@ void PrintR(TrieNode *root, char word[], int index){
 	if(root == NULL) return;
 	if(root->isEndOfWord){
 		word[index] = '\0';
-		printf("%s\t %ld \n", word, root->count);
+		printf("%s \t %ld\n", word, root->count);
 	}
 	for(int i = NUM_LETTERS-1; i >= 0; i--){
 		if(root->children[i]){
